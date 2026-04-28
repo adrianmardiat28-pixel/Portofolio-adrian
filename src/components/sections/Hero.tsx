@@ -82,7 +82,7 @@ export function Hero() {
           style={{ transitionDelay: "300ms" }}
         >
           {/* Container Foto */}
-          <div className="relative h-[420px] w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-[520px] sm:w-[420px]">
+          <div className="relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-130 sm:w-105">
             <img 
               src="/Profile.jpeg" 
               alt="Adrian Alrizqullah Mardiat"
@@ -115,7 +115,7 @@ export function Hero() {
         <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
           <span className="text-primary">$</span> scroll_to_explore
         </div>
-        <div className="h-10 w-[1px] bg-gradient-to-b from-primary to-transparent"></div>
+        <div className="h-10 w-px bg-linear-to-b from-primary to-transparent"></div>
       </div>
     </section>
   );

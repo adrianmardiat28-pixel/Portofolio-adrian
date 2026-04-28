@@ -38,7 +38,7 @@ export function About() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div
-                className={`absolute inset-0 -z-10 bg-gradient-to-br opacity-0 transition-opacity group-hover:opacity-100 ${group.accent}`}
+                className={`absolute inset-0 -z-10 bg-linear-to-br opacity-0 transition-opacity group-hover:opacity-100 ${group.accent}`}
               />
               <h3 className="font-mono text-sm font-semibold text-primary">
                 {group.title}

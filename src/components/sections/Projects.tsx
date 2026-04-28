@@ -46,12 +46,12 @@ export function Projects() {
                 href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal group relative flex w-full flex-col overflow-hidden rounded-3xl border border-border bg-card/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:shadow-glow sm:w-[380px]"
+                className="reveal group relative flex w-full flex-col overflow-hidden rounded-3xl border border-border bg-card/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:shadow-glow sm:w-95"
                 style={{ transitionDelay: `${i * 120}ms` }}
               >
                 {/* Efek Gradient saat Hover */}
                 <div
-                  className={`absolute inset-0 -z-10 bg-gradient-to-br opacity-0 transition-opacity duration-500 group-hover:opacity-100 ${p.accent}`}
+                  className={`absolute inset-0 -z-10 bg-linear-to-br opacity-0 transition-opacity duration-500 group-hover:opacity-100 ${p.accent}`}
                 />
 
                 <div className="flex items-start justify-between">
