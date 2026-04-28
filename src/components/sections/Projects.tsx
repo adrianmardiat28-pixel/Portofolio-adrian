@@ -12,13 +12,13 @@ const projects = [
     accent: "from-cyan-glow/30 to-transparent",
   },
   {
-    title: "Graduation Predictor",
-    tag: "Data Science / ML",
+    title: "Cyber Bullying",
+    tag: "Educational Platform",
     description:
-      "Model machine learning menggunakan Logistic Regression untuk memprediksi probabilitas kelulusan tepat waktu berdasarkan data akademik mahasiswa.",
+      "An educational platform to raise awareness about cyberbullying and provide resources for prevention.",
     icon: BarChart3,
-    stack: ["Python", "Scikit-learn", "Orange"],
-    link: "#", // Tambahkan link jika ada (misal GitHub)
+    stack: ["React", "Nano Banana", "Tailwind CSS"],
+    link: "safenet-multimedia.netlify.app", // Tambahkan link jika ada (misal GitHub)
     accent: "from-emerald-glow/30 to-transparent",
   },
 ];
