@@ -84,7 +84,7 @@ export function Hero() {
           {/* Container Foto */}
           <div className="relative h-[420px] w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-[520px] sm:w-[420px]">
             <img 
-              src="/public/Profile.jpeg" 
+              src="/Profile.jpeg" 
               alt="Adrian Alrizqullah Mardiat"
               className="h-full w-full object-cover" 
             />
