@@ -1,4 +1,4 @@
-import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3 } from "lucide-react";
+import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3,MessageSquareWarning } from "lucide-react";
 
 const projects = [
   {
@@ -16,11 +16,22 @@ const projects = [
     tag: "Educational Platform",
     description:
       "An educational platform to raise awareness about cyberbullying and provide resources for prevention.",
-    icon: BarChart3,
+    icon: MessageSquareWarning,
     stack: ["React", "Nano Banana", "Tailwind CSS"],
-    link: "safenet-multimedia.netlify.app", // Tambahkan link jika ada (misal GitHub)
+    link: "https://safenet-multimedia.netlify.app", // Tambahkan link jika ada (misal GitHub)
     accent: "from-emerald-glow/30 to-transparent",
   },
+  {
+    title: "Accounting System",
+    tag: "Financial Software",
+    description:
+      "Financial transaction tracking for Organitation, with easy-to-understand financial reports.",
+    icon: BarChart3,
+    stack: ["React", "Supabase", "Tailwind CSS"],
+    link: "https://jakarta-mengabdi-accounting.vercel.app/", // Tambahkan link jika ada (misal GitHub)
+    accent: "from-violet-glow/30 to-transparent",
+  },
+
 ];
 
 export function Projects() {
