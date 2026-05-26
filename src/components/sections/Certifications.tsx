@@ -43,6 +43,16 @@ const certifications: Certification[] = [
     type: "training",
     accent: "from-cyan-glow/25 to-transparent", // Saya pakai cyan agar selang-seling warnanya
   },
+  {
+    title: "Junior Web Developer Training (VSGA)",
+    issuer: "Komdigi & BPPTIK",
+    date: "November 5-19, 2025",
+    imageUrl: "/certificates/pelatihan-bnsp.png",
+    credentialUrl: "https://drive.google.com/file/d/1RcZ19a_B6IHahSrnA48KODoOEI5d9Wvt/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
+    description: "Completed 24 hours of intensive training covering structured programming, UI implementation, and web development best practices.",
+    type: "training",
+    accent: "from-cyan-glow/25 to-transparent",
+  },
 ];
 
 // Mapping badge warna berdasarkan type
