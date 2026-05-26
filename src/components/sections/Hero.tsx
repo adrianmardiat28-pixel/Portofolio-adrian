@@ -1,4 +1,12 @@
-import { ArrowDown, Sparkles, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import { 
+  ArrowDown, 
+  Sparkles, 
+  Linkedin, 
+  Instagram, 
+  MessageCircle,
+  GraduationCap,
+  Award 
+} from "lucide-react";
 
 export function Hero() {
   return (
@@ -10,7 +18,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
         
         {/* ================= KOLOM KIRI: TULISAN ================= */}
-        <div className="order-2 md:order-1 text-left">
+        <div className="order-2 text-left md:order-1">
           {/* Badge Status */}
           <div className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 backdrop-blur">
             <Sparkles size={14} className="text-primary" />
@@ -28,28 +36,47 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* Ikon Sosial Media - SUDAH UPDATE LINK */}
+          {/* Ikon Sosial Media */}
           <div className="reveal mt-6 flex gap-5 text-muted-foreground">
-            {/* LinkedIn: Sesuai Nama di Screenshot */}
             <a href="https://linkedin.com/in/adrian-mardiat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
               <Linkedin size={22} />
             </a>
-            {/* Instagram: Sesuai Username @adriann_mardiat */}
             <a href="https://instagram.com/adriann_mardiat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
               <Instagram size={22} />
             </a>
-            {/* WhatsApp: Sesuai nomor yang kamu berikan */}
             <a href="https://wa.me/6281210187156" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
               <MessageCircle size={22} />
             </a>
           </div>
 
+          {/* ================= ACADEMIC HIGHLIGHTS ================= */}
+          <div 
+            className="reveal mt-6 flex flex-wrap items-center gap-3"
+            style={{ transitionDelay: "100ms" }}
+          >
+            {/* Kampus Badge */}
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-card/40 px-3 py-2 backdrop-blur transition-colors hover:border-primary/50 hover:bg-card/60">
+              <GraduationCap size={16} className="text-primary" />
+              <span className="text-sm font-medium text-foreground">
+                President University
+              </span>
+            </div>
+            
+            {/* GPA Badge */}
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-card/40 px-3 py-2 backdrop-blur transition-colors hover:border-primary/50 hover:bg-card/60">
+              <Award size={16} className="text-yellow-500" />
+              <span className="text-sm font-medium text-foreground">
+                GPA: <span className="text-primary">3.89</span>
+              </span>
+            </div>
+          </div>
+
           {/* Deskripsi Singkat */}
           <p
-            className="reveal mt-8 max-w-lg text-base text-muted-foreground sm:text-lg"
-            style={{ transitionDelay: "120ms" }}
+            className="reveal mt-6 max-w-lg text-base text-muted-foreground sm:text-lg"
+            style={{ transitionDelay: "150ms" }}
           >
-            An Information Systems student with a passion for data and web development. I focus on creating functional, data-driven digital solutions.
+            An Information Systems student with a passion for Data Scientist and web development. I focus on creating functional, data-driven digital solutions.
           </p>
 
           {/* Tombol Aksi (CTA) */}
@@ -78,7 +105,7 @@ export function Hero() {
 
         {/* ================= KOLOM KANAN: FOTO ================= */}
         <div 
-          className="reveal order-1 md:order-2 flex justify-center md:justify-end" 
+          className="reveal order-1 flex justify-center md:order-2 md:justify-end" 
           style={{ transitionDelay: "300ms" }}
         >
           {/* Container Foto */}
@@ -90,15 +117,14 @@ export function Hero() {
             />
             
             {/* Overlay Identitas (Floating Card) */}
-            <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-black/40 p-4 backdrop-blur-xl border border-white/10">
+            <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
                 <div className="flex items-center gap-3">
                     <div className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
                     </div>
                     <div>
-                        {/* Username sesuai screenshot IG */}
-                        <p className="text-sm font-bold text-white tracking-wide">@adriann_mardiat</p>
+                        <p className="text-sm font-bold tracking-wide text-white">@adriann_mardiat</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +135,7 @@ export function Hero() {
 
       {/* Indikator Scroll */}
       <div
-        className="reveal absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="reveal absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
         style={{ transitionDelay: "500ms" }}
       >
         <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
