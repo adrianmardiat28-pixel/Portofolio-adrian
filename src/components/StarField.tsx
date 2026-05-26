@@ -54,9 +54,9 @@ export function StarField({ count = 200 }: { count?: number }) {
       />
 
       {/* Aurora glows bawaan */}
-      <div className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-cyan-glow/10 blur-[120px]" />
-      <div className="absolute top-1/3 -right-40 h-[500px] w-[500px] rounded-full bg-violet-glow/10 blur-[120px]" />
-      <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-cyan-glow/5 blur-[120px]" />
+      <div className="absolute -top-40 -left-40 h-125 w-125 rounded-full bg-cyan-glow/10 blur-[120px]" />
+      <div className="absolute top-1/3 -right-40 h-125 w-125 rounded-full bg-violet-glow/10 blur-[120px]" />
+      <div className="absolute bottom-0 left-1/3 h-100 w-100 rounded-full bg-cyan-glow/5 blur-[120px]" />
 
       {/* Render Bintang */}
       {stars.map((s) => (

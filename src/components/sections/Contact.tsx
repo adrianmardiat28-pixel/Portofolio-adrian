@@ -27,7 +27,7 @@ export function Contact() {
       <div className="mx-auto max-w-3xl text-center">
         <div className="reveal">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
-            03 — Contact
+            04 — Contact
           </p>
           <h2 className="mt-3 text-4xl font-bold sm:text-5xl">
             Let's <span className="text-gradient">connect</span>.
