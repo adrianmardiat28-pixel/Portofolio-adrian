@@ -1,4 +1,4 @@
-import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3,MessageSquareWarning } from "lucide-react";
+import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3,MessageSquareWarning, Globe } from "lucide-react";
 
 const projects = [
   {
@@ -32,6 +32,16 @@ const projects = [
     accent: "from-violet-glow/30 to-transparent",
   },
 
+  {
+    title: "Pengabdian Jakarta Mengabdi",
+    tag: "COMMUNITY PROFILE",
+    description:
+      "A digital archive and community platform designed to document social initiatives, annual timelines, and community impact across Jakarta.",
+    icon: Globe, // Bisa diganti Globe atau Users agar lebih merepresentasikan web profil/komunitas dibanding BarChart3
+    stack: ["React", "Supabase", "Tailwind CSS"],
+    link: "https://pengabdian.jakartamengabdi.com/",
+    accent: "from-orange-500/20 to-transparent", // Menggunakan aksen oranye agar senada dengan warna tema web Jakarta Mengabdi di screenshot pertama
+  },
 ];
 
 export function Projects() {
