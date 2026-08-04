@@ -17,6 +17,39 @@ const skillGroups = [
 export function About() {
   return (
     <section id="about" className="relative px-6 py-28 overflow-visible">
+      {/* Cosmic divider top */}
+      <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
+
+      {/* Constellation lines decoration */}
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.04]"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        {/* Constellation pattern */}
+        <line x1="10%" y1="20%" x2="25%" y2="35%" stroke="currentColor" strokeWidth="1" />
+        <line x1="25%" y1="35%" x2="15%" y2="55%" stroke="currentColor" strokeWidth="1" />
+        <line x1="25%" y1="35%" x2="40%" y2="30%" stroke="currentColor" strokeWidth="1" />
+        <line x1="40%" y1="30%" x2="55%" y2="45%" stroke="currentColor" strokeWidth="1" />
+        <line x1="70%" y1="15%" x2="85%" y2="25%" stroke="currentColor" strokeWidth="1" />
+        <line x1="85%" y1="25%" x2="80%" y2="50%" stroke="currentColor" strokeWidth="1" />
+        <line x1="85%" y1="25%" x2="95%" y2="40%" stroke="currentColor" strokeWidth="1" />
+        <line x1="60%" y1="70%" x2="75%" y2="80%" stroke="currentColor" strokeWidth="1" />
+        <line x1="75%" y1="80%" x2="90%" y2="75%" stroke="currentColor" strokeWidth="1" />
+        {/* Constellation dots */}
+        <circle cx="10%" cy="20%" r="2.5" fill="currentColor" opacity="0.6" />
+        <circle cx="25%" cy="35%" r="3" fill="currentColor" opacity="0.8" />
+        <circle cx="15%" cy="55%" r="2" fill="currentColor" opacity="0.5" />
+        <circle cx="40%" cy="30%" r="2.5" fill="currentColor" opacity="0.6" />
+        <circle cx="55%" cy="45%" r="2" fill="currentColor" opacity="0.4" />
+        <circle cx="70%" cy="15%" r="3" fill="currentColor" opacity="0.7" />
+        <circle cx="85%" cy="25%" r="2.5" fill="currentColor" opacity="0.6" />
+        <circle cx="80%" cy="50%" r="2" fill="currentColor" opacity="0.5" />
+        <circle cx="95%" cy="40%" r="2" fill="currentColor" opacity="0.4" />
+        <circle cx="60%" cy="70%" r="2.5" fill="currentColor" opacity="0.5" />
+        <circle cx="75%" cy="80%" r="3" fill="currentColor" opacity="0.7" />
+        <circle cx="90%" cy="75%" r="2" fill="currentColor" opacity="0.4" />
+      </svg>
       {/* Container diperlebar ke max-w-6xl agar muat Lanyard + Teks */}
       <div className="mx-auto max-w-6xl">
         

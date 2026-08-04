@@ -188,6 +188,9 @@ export function Certifications() {
 
   return (
     <section id="certifications" className="relative px-6 py-28">
+      {/* Cosmic divider top */}
+      <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
+
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="reveal mb-14 text-center">

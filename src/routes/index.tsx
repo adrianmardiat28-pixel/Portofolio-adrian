@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { StarField } from "@/components/StarField";
+import { CosmicBackground } from "@/components/CosmicBackground";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -33,6 +34,7 @@ function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <StarField />
+      <CosmicBackground />
       <div className="relative z-10">
         <Navbar />
         <main>

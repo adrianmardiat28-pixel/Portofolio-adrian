@@ -103,30 +103,74 @@ export function Hero() {
           </div>
         </div>
 
-        {/* ================= KOLOM KANAN: FOTO ================= */}
+        {/* ================= KOLOM KANAN: FOTO + ORBIT ================= */}
         <div 
           className="reveal order-1 flex justify-center md:order-2 md:justify-end" 
           style={{ transitionDelay: "300ms" }}
         >
-          {/* Container Foto */}
-          <div className="relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-130 sm:w-105">
-            <img 
-              src="/Profile.jpeg" 
-              alt="Adrian Alrizqullah Mardiat"
-              className="h-full w-full object-cover" 
+          {/* Orbit Container */}
+          <div className="relative flex items-center justify-center">
+            {/* Outer orbital ring */}
+            <div
+              className="absolute rounded-full border border-cyan-glow/10"
+              style={{
+                width: 480,
+                height: 480,
+                animation: "orbit-ring-spin 30s linear infinite",
+              }}
+            >
+              {/* Orbital dot */}
+              <div
+                className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-cyan-glow/50"
+                style={{ boxShadow: "0 0 10px 3px rgba(100, 200, 255, 0.3)" }}
+              />
+            </div>
+
+            {/* Middle orbital ring */}
+            <div
+              className="absolute rounded-full border border-violet-glow/8"
+              style={{
+                width: 420,
+                height: 420,
+                animation: "orbit-ring-spin 22s linear infinite reverse",
+              }}
+            >
+              <div
+                className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-violet-glow/40"
+                style={{ boxShadow: "0 0 8px 2px rgba(160, 100, 255, 0.3)" }}
+              />
+            </div>
+
+            {/* Cosmic glow behind photo */}
+            <div
+              className="absolute rounded-full cosmic-glow"
+              style={{
+                width: 360,
+                height: 360,
+                background: "radial-gradient(circle, rgba(100, 200, 255, 0.08) 0%, rgba(160, 100, 255, 0.04) 50%, transparent 70%)",
+              }}
             />
-            
-            {/* Overlay Identitas (Floating Card) */}
-            <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
-                <div className="flex items-center gap-3">
-                    <div className="relative flex h-3 w-3">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-                    </div>
-                    <div>
-                        <p className="text-sm font-bold tracking-wide text-white">@adriann_mardiat</p>
-                    </div>
-                </div>
+
+            {/* Container Foto */}
+            <div className="relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-130 sm:w-105" style={{ animation: "cosmic-border-glow 6s ease-in-out infinite" }}>
+              <img 
+                src="/Profile.jpeg" 
+                alt="Adrian Alrizqullah Mardiat"
+                className="h-full w-full object-cover" 
+              />
+              
+              {/* Overlay Identitas (Floating Card) */}
+              <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
+                  <div className="flex items-center gap-3">
+                      <div className="relative flex h-3 w-3">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                          <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+                      </div>
+                      <div>
+                          <p className="text-sm font-bold tracking-wide text-white">@adriann_mardiat</p>
+                      </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
