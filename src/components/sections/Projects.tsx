@@ -1,6 +1,16 @@
-import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3,MessageSquareWarning, Globe } from "lucide-react";
+import { ArrowUpRight, HeartHandshake, ShieldCheck, BarChart3, MessageSquareWarning, Globe, Recycle } from "lucide-react";
 
 const projects = [
+  {
+    title: "Eco Route AI",
+    tag: "AI Waste Management",
+    description:
+      "An AI-powered waste management platform for DLH (Dinas Lingkungan Hidup). Features ML-based daily & event waste prediction, fleet setup & route optimization, and an AI chatbot for smart waste operations.",
+    icon: Recycle,
+    stack: ["Python", "Streamlit", "Machine Learning", "AI Chatbot"],
+    link: "https://eco-route-ai.streamlit.app/",
+    accent: "from-green-500/30 to-transparent",
+  },
   {
     title: "Kakak Saku",
     tag: "Donation Platform",
