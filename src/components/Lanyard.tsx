@@ -27,6 +27,9 @@ export function Lanyard() {
   // Ref untuk mengatur efek perbesar (zoom)
   const scaleRef = useRef(1);
 
+  // Deteksi mobile (touch device)
+  const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 1024px)").matches;
+
   // ─── Inisialisasi titik-titik tali ──────────────────────────────────────
   const initPoints = useCallback((anchorX: number, anchorY: number) => {
     const pts: Point[] = [];
@@ -266,6 +269,15 @@ export function Lanyard() {
     return () => cancelAnimationFrame(rafRef.current);
   }, [initPoints, simulate]);
 
+  // ─── Helper: Cek apakah posisi mengenai area badge ──────────────────────
+  const isTouchOnBadge = (px: number, py: number): boolean => {
+    const pts = pointsRef.current;
+    if (pts.length < NUM_POINTS + 1) return false;
+    const tip = pts[NUM_POINTS];
+    const distToCard = Math.hypot(tip.x - px, tip.y + 110 - py);
+    return distToCard < 130;
+  };
+
   // ─── Helper Pointer ──────────────────────────────────────────────────────
   const findClosestPoint = (px: number, py: number): number => {
     const pts = pointsRef.current;
@@ -302,6 +314,12 @@ export function Lanyard() {
     if (!canvas) return;
     const pos = getCanvasPos(e, canvas);
     mouseRef.current = pos;
+
+    // Di mobile: hanya bisa drag kalau sentuh area badge/card
+    if (isMobile && !isTouchOnBadge(pos.x, pos.y)) {
+      return; // Biarkan scroll berjalan normal
+    }
+
     const idx = findClosestPoint(pos.x, pos.y);
     if (idx > 0) {
       draggingRef.current = true;
@@ -347,12 +365,27 @@ export function Lanyard() {
         onMouseMove={handlePointerMove}
         onMouseUp={handlePointerUp}
         onMouseLeave={() => { handlePointerUp(); mouseRef.current = { x: -1000, y: -1000 }; }}
-        onTouchStart={(e) => { e.preventDefault(); handlePointerDown(e); }}
-        onTouchMove={(e) => { e.preventDefault(); handlePointerMove(e); }}
+        onTouchStart={(e) => {
+          const canvas = canvasRef.current;
+          if (!canvas) return;
+          const pos = getCanvasPos(e, canvas);
+          // Di mobile: hanya preventDefault (block scroll) jika sentuh area badge
+          if (!isMobile || isTouchOnBadge(pos.x, pos.y)) {
+            e.preventDefault();
+          }
+          handlePointerDown(e);
+        }}
+        onTouchMove={(e) => {
+          // Hanya block scroll jika sedang drag badge
+          if (draggingRef.current) {
+            e.preventDefault();
+          }
+          handlePointerMove(e);
+        }}
         onTouchEnd={handlePointerUp}
         style={{
           cursor: "grab",
-          touchAction: "none",
+          touchAction: isMobile ? "pan-y" : "none", // Di mobile, izinkan scroll vertikal
           display: "block",
         }}
       />
