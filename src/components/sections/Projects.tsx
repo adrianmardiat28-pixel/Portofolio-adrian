@@ -50,7 +50,17 @@ const projects = [
     icon: Globe, // Bisa diganti Globe atau Users agar lebih merepresentasikan web profil/komunitas dibanding BarChart3
     stack: ["React", "Supabase", "Tailwind CSS"],
     link: "https://pengabdian.jakartamengabdi.com/",
-    accent: "from-orange-500/20 to-transparent", // Menggunakan aksen oranye agar senada dengan warna tema web Jakarta Mengabdi di screenshot pertama
+    accent: "from-orange-500/20 to-transparent",
+  },
+  {
+    title: "Maharta Gria Deanex",
+    tag: "Corporate Landing Page",
+    description:
+      "A professional corporate landing page for PT Maharta Gria Deanex, a trusted debt collection company. Features company profile, services overview, career page, news section, and contact integration.",
+    icon: ShieldCheck,
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    link: "https://mahartagd.com/",
+    accent: "from-red-500/30 to-transparent",
   },
 ];
 

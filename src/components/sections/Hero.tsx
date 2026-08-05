@@ -5,7 +5,8 @@ import {
   Instagram, 
   MessageCircle,
   GraduationCap,
-  Award 
+  Award,
+  Download
 } from "lucide-react";
 
 export function Hero() {
@@ -93,6 +94,16 @@ export function Hero() {
                 size={16}
                 className="transition-transform group-hover:translate-y-0.5"
               />
+            </a>
+            <a
+              href="/Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Resume_Adrian_Alrizqullah.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
+            >
+              <Download size={16} />
+              Download CV
             </a>
             <a
               href="#contact"
