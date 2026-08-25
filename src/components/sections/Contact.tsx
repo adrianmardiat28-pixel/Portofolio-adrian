@@ -49,7 +49,7 @@ export function Contact() {
           />
 
           <p className="relative font-mono text-xs uppercase tracking-[0.3em] text-primary">
-            04 — Contact
+            05 — Contact
           </p>
           <h2 className="relative mt-3 text-4xl font-bold sm:text-5xl">
             Let's <span className="text-gradient">connect</span>.
