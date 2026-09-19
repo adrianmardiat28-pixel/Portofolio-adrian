@@ -17,9 +17,11 @@ const certifications: Certification[] = [
     title: "Junior Web Developer BNSP Certificate",
     issuer: "Komdigi bpptik",
     date: "December 10, 2025",
-    credentialUrl: "https://drive.google.com/file/d/1TtA0EWWKCQ-P0Sat2PuyjiaZqMIHttXk/view?usp=drive_link",
+    credentialUrl:
+      "https://drive.google.com/file/d/1TtA0EWWKCQ-P0Sat2PuyjiaZqMIHttXk/view?usp=drive_link",
     imageUrl: "/certificates/bnsp.png",
-    description: "Validated competency as a Junior Web Developer in the area of Programming and Software Development.",
+    description:
+      "Validated competency as a Junior Web Developer in the area of Programming and Software Development.",
     type: "certification",
     accent: "from-cyan-glow/25 to-transparent",
   },
@@ -27,9 +29,11 @@ const certifications: Certification[] = [
     title: "Data Science & Machine Learning (DSF 47)",
     issuer: "dibimbing.id",
     date: "January 19-21, 2026",
-    credentialUrl: "https://drive.google.com/file/d/1mnGs_S6dclOKspncykCNa4biFIV5k3O1/view?usp=sharing", // INGAT: Ganti dengan link Google Drive file sertifikat ini
+    credentialUrl:
+      "https://drive.google.com/file/d/1mnGs_S6dclOKspncykCNa4biFIV5k3O1/view?usp=sharing", // INGAT: Ganti dengan link Google Drive file sertifikat ini
     imageUrl: "/certificates/DS-Dibimbing.png",
-    description: "Actively participated in the Faculty of Data training program, focusing on fundamental Data Science and Machine Learning (DSML) concepts.",
+    description:
+      "Actively participated in the Faculty of Data training program, focusing on fundamental Data Science and Machine Learning (DSML) concepts.",
     type: "training",
     accent: "from-violet-glow/25 to-transparent",
   },
@@ -37,9 +41,11 @@ const certifications: Certification[] = [
     title: "IT Cyber Security Awareness (DSF 47)",
     issuer: "dibimbing.id",
     date: "January 12-14, 2026",
-    credentialUrl: "https://drive.google.com/file/d/1duVnlW-dLpw1QKrVl69NHqjfi9Uft_Ff/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
+    credentialUrl:
+      "https://drive.google.com/file/d/1duVnlW-dLpw1QKrVl69NHqjfi9Uft_Ff/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
     imageUrl: "/certificates/cyber-Dibimbing.png",
-    description: "Introductory training covering foundational cyber security concepts, digital threats, and basic IT security awareness.",
+    description:
+      "Introductory training covering foundational cyber security concepts, digital threats, and basic IT security awareness.",
     type: "training",
     accent: "from-cyan-glow/25 to-transparent", // Saya pakai cyan agar selang-seling warnanya
   },
@@ -48,8 +54,10 @@ const certifications: Certification[] = [
     issuer: "Komdigi & BPPTIK",
     date: "November 5-19, 2025",
     imageUrl: "/certificates/pelatihan-bnsp.png",
-    credentialUrl: "https://drive.google.com/file/d/1RcZ19a_B6IHahSrnA48KODoOEI5d9Wvt/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
-    description: "Completed 24 hours of intensive training covering structured programming, UI implementation, and web development best practices.",
+    credentialUrl:
+      "https://drive.google.com/file/d/1RcZ19a_B6IHahSrnA48KODoOEI5d9Wvt/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
+    description:
+      "Completed 24 hours of intensive training covering structured programming, UI implementation, and web development best practices.",
     type: "training",
     accent: "from-cyan-glow/25 to-transparent",
   },
@@ -59,24 +67,16 @@ const certifications: Certification[] = [
 const typeBadge = {
   certification: {
     label: "Certificate",
-    className:
-      "border-cyan-glow/30 bg-cyan-glow/10 text-cyan-glow",
+    className: "border-cyan-glow/30 bg-cyan-glow/10 text-cyan-glow",
   },
   training: {
     label: "Training",
-    className:
-      "border-violet-glow/30 bg-violet-glow/10 text-violet-glow",
+    className: "border-violet-glow/30 bg-violet-glow/10 text-violet-glow",
   },
 };
 
 /* ─── Modal Component ─── */
-function CertModal({
-  cert,
-  onClose,
-}: {
-  cert: Certification;
-  onClose: () => void;
-}) {
+function CertModal({ cert, onClose }: { cert: Certification; onClose: () => void }) {
   const badge = typeBadge[cert.type];
 
   // Close on Escape key
@@ -84,7 +84,7 @@ function CertModal({
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     },
-    [onClose]
+    [onClose],
   );
 
   useEffect(() => {
@@ -107,13 +107,13 @@ function CertModal({
 
       {/* Modal Content */}
       <div
-        className="relative z-10 flex w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-border bg-card/95 shadow-2xl backdrop-blur-xl animate-[fade-up_0.35s_ease-out_forwards]"
+        className="relative z-10 flex w-full max-w-3xl flex-col overflow-hidden galaxy-card rounded-3xl shadow-2xl animate-[fade-up_0.35s_ease-out_forwards]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/60 text-muted-foreground backdrop-blur transition-all hover:border-primary hover:text-primary"
+          className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center galaxy-chip rounded-full text-muted-foreground backdrop-blur transition-all hover:border-primary hover:text-primary"
           aria-label="Close modal"
         >
           <X size={16} />
@@ -160,9 +160,7 @@ function CertModal({
             </span>
           </div>
 
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            {cert.description}
-          </p>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{cert.description}</p>
 
           {/* Action Buttons */}
           {cert.credentialUrl && cert.credentialUrl !== "#" && (
@@ -187,7 +185,7 @@ export function Certifications() {
   const [selected, setSelected] = useState<Certification | null>(null);
 
   return (
-    <section id="certifications" className="relative px-6 py-28">
+    <section id="certifications" className="cosmic-section relative px-6 py-28">
       {/* Cosmic divider top */}
       <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
 
@@ -201,8 +199,8 @@ export function Certifications() {
             Continuous <span className="text-gradient">learning</span>.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            A curated list of professional certifications and training programs
-            that have shaped my expertise in data science and web development.
+            A curated list of professional certifications and training programs that have shaped my
+            expertise in data science and web development.
           </p>
         </div>
 
@@ -222,7 +220,7 @@ export function Certifications() {
                     setSelected(cert);
                   }
                 }}
-                className="reveal group relative flex w-full cursor-pointer flex-col overflow-hidden rounded-3xl border border-border bg-card/40 p-7 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow sm:w-[calc(50%-12px)]"
+                className="reveal group relative flex w-full cursor-pointer flex-col overflow-hidden galaxy-card rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow sm:w-[calc(50%-12px)]"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
                 {/* Gradient Hover Effect */}
@@ -254,9 +252,7 @@ export function Certifications() {
                 </div>
 
                 {/* Content */}
-                <h3 className="mt-5 text-lg font-semibold leading-snug">
-                  {cert.title}
-                </h3>
+                <h3 className="mt-5 text-lg font-semibold leading-snug">{cert.title}</h3>
 
                 <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1.5">
@@ -284,9 +280,7 @@ export function Certifications() {
       </div>
 
       {/* Modal */}
-      {selected && (
-        <CertModal cert={selected} onClose={() => setSelected(null)} />
-      )}
+      {selected && <CertModal cert={selected} onClose={() => setSelected(null)} />}
     </section>
   );
 }

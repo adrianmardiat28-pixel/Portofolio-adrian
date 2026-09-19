@@ -42,7 +42,7 @@ const organizations: Organization[] = [
         period: "Feb 2025 – Sept 2025",
         location: "Kepulauan Seribu, DKI Jakarta",
         description:
-          "Merancang dan menjalankan program pengabdian masyarakat \"Sapa Kampung\" selama 3 hari 2 malam di Kepulauan Seribu. Program ini berfokus pada pemberdayaan komunitas lokal melalui kegiatan edukasi dan sosial.",
+          'Merancang dan menjalankan program pengabdian masyarakat "Sapa Kampung" selama 3 hari 2 malam di Kepulauan Seribu. Program ini berfokus pada pemberdayaan komunitas lokal melalui kegiatan edukasi dan sosial.',
         highlights: [
           "Program Sapa Kampung — 3 hari 2 malam",
           "Pengabdian masyarakat di Kepulauan Seribu",
@@ -92,12 +92,8 @@ const organizations: Organization[] = [
         period: "Feb 2026 – Sekarang",
         location: "DKI Jakarta",
         description:
-          "Mengembangkan platform donasi \"Kakak Saku\" untuk mengelola donasi rutin selama 9 bulan serta donasi tanggap darurat ketika terjadi bencana. Platform ini mendukung pendanaan berkelanjutan bagi program-program komunitas.",
-        highlights: [
-          "Donasi rutin 9 bulan",
-          "Donasi tanggap bencana",
-          "Pendanaan berkelanjutan",
-        ],
+          'Mengembangkan platform donasi "Kakak Saku" untuk mengelola donasi rutin selama 9 bulan serta donasi tanggap darurat ketika terjadi bencana. Platform ini mendukung pendanaan berkelanjutan bagi program-program komunitas.',
+        highlights: ["Donasi rutin 9 bulan", "Donasi tanggap bencana", "Pendanaan berkelanjutan"],
         photos: [],
         accent: "from-violet-glow/25 to-transparent",
       },
@@ -135,10 +131,9 @@ function PhotoLightbox({
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") setIndex((i) => (i + 1) % photos.length);
-      if (e.key === "ArrowLeft")
-        setIndex((i) => (i - 1 + photos.length) % photos.length);
+      if (e.key === "ArrowLeft") setIndex((i) => (i - 1 + photos.length) % photos.length);
     },
-    [onClose, photos.length]
+    [onClose, photos.length],
   );
 
   useEffect(() => {
@@ -151,10 +146,7 @@ function PhotoLightbox({
   }, [handleKeyDown]);
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      onClick={onClose}
-    >
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
       <div
         className="relative z-10 flex max-h-[85vh] max-w-4xl flex-col items-center"
@@ -177,9 +169,7 @@ function PhotoLightbox({
         {photos.length > 1 && (
           <div className="mt-4 flex items-center gap-4">
             <button
-              onClick={() =>
-                setIndex((i) => (i - 1 + photos.length) % photos.length)
-              }
+              onClick={() => setIndex((i) => (i - 1 + photos.length) % photos.length)}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/80 text-muted-foreground backdrop-blur transition-all hover:border-primary hover:text-primary"
               aria-label="Previous photo"
             >
@@ -243,11 +233,7 @@ function PhotoGallery({ photos }: { photos: string[] }) {
       </div>
 
       {lightbox !== null && (
-        <PhotoLightbox
-          photos={photos}
-          initialIndex={lightbox}
-          onClose={() => setLightbox(null)}
-        />
+        <PhotoLightbox photos={photos} initialIndex={lightbox} onClose={() => setLightbox(null)} />
       )}
     </>
   );
@@ -256,7 +242,7 @@ function PhotoGallery({ photos }: { photos: string[] }) {
 /* ─── Main Section ─── */
 export function Organizations() {
   return (
-    <section id="organizations" className="relative px-6 py-28">
+    <section id="organizations" className="cosmic-section relative px-6 py-28">
       {/* Cosmic divider top */}
       <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
 
@@ -270,8 +256,8 @@ export function Organizations() {
             Community <span className="text-gradient">impact</span>.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            Active involvement in community organizations, driving social impact
-            through meaningful programs and initiatives.
+            Active involvement in community organizations, driving social impact through meaningful
+            programs and initiatives.
           </p>
         </div>
 
@@ -282,17 +268,12 @@ export function Organizations() {
               {/* Org Header */}
               <div className="mb-8 flex items-center gap-5">
                 <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card/60 p-2 backdrop-blur">
-                  <img
-                    src={org.logo}
-                    alt={org.name}
-                    className="h-full w-full object-contain"
-                  />
+                  <img src={org.logo} alt={org.name} className="h-full w-full object-contain" />
                   {/* Subtle orbital glow */}
                   <div
                     className="absolute inset-[-4px] rounded-2xl border border-primary/15"
                     style={{
-                      animation:
-                        "cosmic-border-glow 8s ease-in-out infinite",
+                      animation: "cosmic-border-glow 8s ease-in-out infinite",
                     }}
                   />
                 </div>
@@ -333,10 +314,9 @@ export function Organizations() {
 
                     {/* Role Card */}
                     <div
-                      className="relative overflow-hidden rounded-2xl border border-border bg-card/40 p-6 backdrop-blur transition-all duration-300 hover:border-primary/40 hover:shadow-glow sm:p-7"
+                      className="relative overflow-hidden galaxy-card rounded-2xl p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-glow sm:p-7"
                       style={{
-                        animation:
-                          "cosmic-border-glow 8s ease-in-out infinite",
+                        animation: "cosmic-border-glow 8s ease-in-out infinite",
                         animationDelay: `${i * 3}s`,
                       }}
                     >
@@ -352,9 +332,7 @@ export function Organizations() {
                       {/* Role title & meta */}
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div>
-                          <h4 className="text-lg font-semibold sm:text-xl">
-                            {role.role}
-                          </h4>
+                          <h4 className="text-lg font-semibold sm:text-xl">{role.role}</h4>
                           <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
                             <span className="flex items-center gap-1.5">
                               <Calendar size={13} />
@@ -381,7 +359,7 @@ export function Organizations() {
                         {role.highlights.map((h) => (
                           <span
                             key={h}
-                            className="rounded-full border border-border bg-background/20 px-3 py-1 font-mono text-[10px] text-foreground/80"
+                            className="galaxy-chip rounded-full px-3 py-1 font-mono text-[10px] text-foreground/80"
                           >
                             {h}
                           </span>

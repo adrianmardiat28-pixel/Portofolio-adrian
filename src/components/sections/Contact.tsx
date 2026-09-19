@@ -23,7 +23,7 @@ const socials = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative px-6 py-28">
+    <section id="contact" className="cosmic-section relative px-6 py-28">
       {/* Cosmic divider top */}
       <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
 
@@ -35,7 +35,8 @@ export function Contact() {
             style={{
               width: 300,
               height: 300,
-              background: "radial-gradient(circle, rgba(100, 200, 255, 0.06) 0%, rgba(160, 100, 255, 0.03) 40%, transparent 70%)",
+              background:
+                "radial-gradient(circle, rgba(100, 200, 255, 0.06) 0%, rgba(160, 100, 255, 0.03) 40%, transparent 70%)",
               animation: "pulse-glow 5s ease-in-out infinite",
             }}
           />
@@ -55,8 +56,8 @@ export function Contact() {
             Let's <span className="text-gradient">connect</span>.
           </h2>
           <p className="relative mx-auto mt-5 max-w-xl text-muted-foreground">
-            Open to internships, collaborations, and friendly conversations
-            about data, design, or anything in between.
+            Open to internships, collaborations, and friendly conversations about data, design, or
+            anything in between.
           </p>
         </div>
 
@@ -70,7 +71,10 @@ export function Contact() {
                 target="_blank"
                 rel="noreferrer noopener"
                 className="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-border bg-card/50 px-5 py-4 backdrop-blur transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-glow"
-                style={{ animation: "cosmic-border-glow 6s ease-in-out infinite", animationDelay: `${i * 2}s` }}
+                style={{
+                  animation: "cosmic-border-glow 6s ease-in-out infinite",
+                  animationDelay: `${i * 2}s`,
+                }}
               >
                 {/* Neon glow effect on hover */}
                 <div className="absolute inset-0 -z-10 bg-linear-to-br from-cyan-glow/0 to-violet-glow/0 opacity-0 transition-opacity duration-500 group-hover:from-cyan-glow/10 group-hover:to-violet-glow/10 group-hover:opacity-100" />
@@ -78,12 +82,13 @@ export function Contact() {
                 <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground transition-transform duration-300 group-hover:scale-110">
                   <Icon size={18} />
                   {/* Mini orbital */}
-                  <div className="absolute inset-[-4px] rounded-xl border border-primary/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ animation: "orbit-ring-spin 3s linear infinite" }} />
+                  <div
+                    className="absolute inset-[-4px] rounded-xl border border-primary/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{ animation: "orbit-ring-spin 3s linear infinite" }}
+                  />
                 </span>
                 <span className="text-left">
-                  <span className="block text-xs text-muted-foreground">
-                    {s.name}
-                  </span>
+                  <span className="block text-xs text-muted-foreground">{s.name}</span>
                   <span className="block font-mono text-sm">{s.handle}</span>
                 </span>
               </a>

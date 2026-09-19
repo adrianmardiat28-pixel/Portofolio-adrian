@@ -1,27 +1,26 @@
-import { 
-  ArrowDown, 
-  Sparkles, 
-  Linkedin, 
-  Instagram, 
+import {
+  ArrowDown,
+  Sparkles,
+  Linkedin,
+  Instagram,
   MessageCircle,
   GraduationCap,
   Award,
-  Download
+  Download,
 } from "lucide-react";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center px-6 pt-24"
+      className="cosmic-section relative flex min-h-screen items-center justify-center px-6 pt-24"
     >
       {/* Container Utama: Grid 1 Kolom di HP, 2 Kolom di Laptop (md) */}
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
-        
         {/* ================= KOLOM KIRI: TULISAN ================= */}
         <div className="order-2 text-left md:order-1">
           {/* Badge Status */}
-          <div className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-4 py-1.5 backdrop-blur">
+          <div className="reveal galaxy-chip mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5">
             <Sparkles size={14} className="text-primary" />
             <span className="font-mono text-xs text-muted-foreground">
               Available for collaboration
@@ -30,41 +29,56 @@ export function Hero() {
 
           {/* Headline Utama */}
           <h1 className="reveal text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-            Hi, I'm{" "}
-            <span className="text-gradient">Adrian Alrizqullah Mardiat</span>
+            Hi, I'm <span className="text-gradient">Adrian Alrizqullah Mardiat</span>
             <span className="mt-4 block text-2xl font-light text-muted-foreground sm:text-3xl">
               <span className="font-mono text-foreground">Data Scientist & Web Dev</span>.
             </span>
           </h1>
 
           {/* Ikon Sosial Media */}
-          <div className="reveal mt-6 flex gap-5 text-muted-foreground">
-            <a href="https://linkedin.com/in/adrian-mardiat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+          <div className="reveal mt-6 flex gap-4 text-muted-foreground">
+            <a
+              href="https://linkedin.com/in/adrian-mardiat"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="galaxy-chip grid h-11 w-11 place-items-center rounded-full transition-all hover:-translate-y-1 hover:text-primary hover:shadow-glow"
+            >
               <Linkedin size={22} />
             </a>
-            <a href="https://instagram.com/adriann_mardiat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+            <a
+              href="https://instagram.com/adriann_mardiat"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="galaxy-chip grid h-11 w-11 place-items-center rounded-full transition-all hover:-translate-y-1 hover:text-primary hover:shadow-glow"
+            >
               <Instagram size={22} />
             </a>
-            <a href="https://wa.me/6281210187156" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+            <a
+              href="https://wa.me/6281210187156"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="galaxy-chip grid h-11 w-11 place-items-center rounded-full transition-all hover:-translate-y-1 hover:text-primary hover:shadow-glow"
+            >
               <MessageCircle size={22} />
             </a>
           </div>
 
           {/* ================= ACADEMIC HIGHLIGHTS ================= */}
-          <div 
+          <div
             className="reveal mt-6 flex flex-wrap items-center gap-3"
             style={{ transitionDelay: "100ms" }}
           >
             {/* Kampus Badge */}
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-card/40 px-3 py-2 backdrop-blur transition-colors hover:border-primary/50 hover:bg-card/60">
+            <div className="galaxy-chip flex items-center gap-2 rounded-xl px-3 py-2 transition-all hover:border-primary/50 hover:shadow-glow">
               <GraduationCap size={16} className="text-primary" />
-              <span className="text-sm font-medium text-foreground">
-                President University
-              </span>
+              <span className="text-sm font-medium text-foreground">President University</span>
             </div>
-            
+
             {/* GPA Badge */}
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-card/40 px-3 py-2 backdrop-blur transition-colors hover:border-primary/50 hover:bg-card/60">
+            <div className="galaxy-chip flex items-center gap-2 rounded-xl px-3 py-2 transition-all hover:border-primary/50 hover:shadow-glow">
               <Award size={16} className="text-yellow-500" />
               <span className="text-sm font-medium text-foreground">
                 GPA: <span className="text-primary">3.89</span>
@@ -77,7 +91,8 @@ export function Hero() {
             className="reveal mt-6 max-w-lg text-base text-muted-foreground sm:text-lg"
             style={{ transitionDelay: "150ms" }}
           >
-            An Information Systems student with a passion for Data Scientist and web development. I focus on creating functional, data-driven digital solutions.
+            An Information Systems student with a passion for Data Scientist and web development. I
+            focus on creating functional, data-driven digital solutions.
           </p>
 
           {/* Tombol Aksi (CTA) */}
@@ -87,27 +102,24 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:scale-105 active:scale-95"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-gradient-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:scale-105 active:scale-95"
             >
               Lihat Proyek
-              <ArrowDown
-                size={16}
-                className="transition-transform group-hover:translate-y-0.5"
-              />
+              <ArrowDown size={16} className="transition-transform group-hover:translate-y-0.5" />
             </a>
             <a
               href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download="Resume_Adrian_Alrizqullah.pdf"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
+              className="galaxy-chip inline-flex min-h-11 items-center gap-2 rounded-full px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
             >
               <Download size={16} />
               Download CV
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
+              className="galaxy-chip inline-flex min-h-11 items-center gap-2 rounded-full px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
             >
               Kontak Saya
             </a>
@@ -115,8 +127,8 @@ export function Hero() {
         </div>
 
         {/* ================= KOLOM KANAN: FOTO + ORBIT ================= */}
-        <div 
-          className="reveal order-1 flex justify-center md:order-2 md:justify-end" 
+        <div
+          className="reveal order-1 flex justify-center md:order-2 md:justify-end"
           style={{ transitionDelay: "300ms" }}
         >
           {/* Orbit Container */}
@@ -158,34 +170,37 @@ export function Hero() {
               style={{
                 width: 360,
                 height: 360,
-                background: "radial-gradient(circle, rgba(100, 200, 255, 0.08) 0%, rgba(160, 100, 255, 0.04) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(100, 200, 255, 0.08) 0%, rgba(160, 100, 255, 0.04) 50%, transparent 70%)",
               }}
             />
 
             {/* Container Foto */}
-            <div className="relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] border border-border bg-card shadow-2xl sm:h-130 sm:w-105" style={{ animation: "cosmic-border-glow 6s ease-in-out infinite" }}>
-              <img 
-                src="/Profile.jpeg" 
+            <div
+              className="galaxy-card relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] shadow-2xl sm:h-130 sm:w-105"
+              style={{ animation: "cosmic-border-glow 6s ease-in-out infinite" }}
+            >
+              <img
+                src="/Profile.jpeg"
                 alt="Adrian Alrizqullah Mardiat"
-                className="h-full w-full object-cover" 
+                className="h-full w-full object-cover"
               />
-              
+
               {/* Overlay Identitas (Floating Card) */}
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-black/40 p-4 backdrop-blur-xl">
-                  <div className="flex items-center gap-3">
-                      <div className="relative flex h-3 w-3">
-                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-                      </div>
-                      <div>
-                          <p className="text-sm font-bold tracking-wide text-white">@adriann_mardiat</p>
-                      </div>
+              <div className="galaxy-card absolute bottom-6 left-6 right-6 rounded-2xl p-4">
+                <div className="flex items-center gap-3">
+                  <div className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
                   </div>
+                  <div>
+                    <p className="text-sm font-bold tracking-wide text-white">@adriann_mardiat</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Indikator Scroll */}
