@@ -30,7 +30,7 @@ const certifications: Certification[] = [
     issuer: "dibimbing.id",
     date: "January 19-21, 2026",
     credentialUrl:
-      "https://drive.google.com/file/d/1mnGs_S6dclOKspncykCNa4biFIV5k3O1/view?usp=sharing", // INGAT: Ganti dengan link Google Drive file sertifikat ini
+      "https://drive.google.com/file/d/1mnGs_S6dclOKspncykCNa4biFIV5k3O1/view?usp=sharing", // REMEMBER: Replace with Google Drive link
     imageUrl: "/certificates/DS-Dibimbing.png",
     description:
       "Actively participated in the Faculty of Data training program, focusing on fundamental Data Science and Machine Learning (DSML) concepts.",
@@ -42,12 +42,12 @@ const certifications: Certification[] = [
     issuer: "dibimbing.id",
     date: "January 12-14, 2026",
     credentialUrl:
-      "https://drive.google.com/file/d/1duVnlW-dLpw1QKrVl69NHqjfi9Uft_Ff/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
+      "https://drive.google.com/file/d/1duVnlW-dLpw1QKrVl69NHqjfi9Uft_Ff/view?usp=sharing", // REMEMBER: Replace with Google Drive link
     imageUrl: "/certificates/cyber-Dibimbing.png",
     description:
       "Introductory training covering foundational cyber security concepts, digital threats, and basic IT security awareness.",
     type: "training",
-    accent: "from-cyan-glow/25 to-transparent", // Saya pakai cyan agar selang-seling warnanya
+    accent: "from-cyan-glow/25 to-transparent", // Using cyan to alternate colors
   },
   {
     title: "Junior Web Developer Training (VSGA)",
@@ -55,7 +55,7 @@ const certifications: Certification[] = [
     date: "November 5-19, 2025",
     imageUrl: "/certificates/pelatihan-bnsp.png",
     credentialUrl:
-      "https://drive.google.com/file/d/1RcZ19a_B6IHahSrnA48KODoOEI5d9Wvt/view?usp=sharing", // INGAT: Ganti dengan link Google Drive
+      "https://drive.google.com/file/d/1RcZ19a_B6IHahSrnA48KODoOEI5d9Wvt/view?usp=sharing", // REMEMBER: Replace with Google Drive link
     description:
       "Completed 24 hours of intensive training covering structured programming, UI implementation, and web development best practices.",
     type: "training",
@@ -63,7 +63,7 @@ const certifications: Certification[] = [
   },
 ];
 
-// Mapping badge warna berdasarkan type
+// Mapping badge colors based on type
 const typeBadge = {
   certification: {
     label: "Certificate",

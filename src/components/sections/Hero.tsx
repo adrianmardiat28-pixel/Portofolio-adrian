@@ -15,11 +15,11 @@ export function Hero() {
       id="home"
       className="cosmic-section relative flex min-h-screen items-center justify-center px-6 pt-24"
     >
-      {/* Container Utama: Grid 1 Kolom di HP, 2 Kolom di Laptop (md) */}
+      {/* Main Container: 1 Column Grid on Mobile, 2 Columns on Laptop (md) */}
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
-        {/* ================= KOLOM KIRI: TULISAN ================= */}
+        {/* ================= LEFT COLUMN: TEXT ================= */}
         <div className="order-2 text-left md:order-1">
-          {/* Badge Status */}
+          {/* Status Badge */}
           <div className="reveal galaxy-chip mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5">
             <Sparkles size={14} className="text-primary" />
             <span className="font-mono text-xs text-muted-foreground">
@@ -27,7 +27,7 @@ export function Hero() {
             </span>
           </div>
 
-          {/* Headline Utama */}
+          {/* Main Headline */}
           <h1 className="reveal text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
             Hi, I'm <span className="text-gradient">Adrian Alrizqullah Mardiat</span>
             <span className="mt-4 block text-2xl font-light text-muted-foreground sm:text-3xl">
@@ -35,7 +35,7 @@ export function Hero() {
             </span>
           </h1>
 
-          {/* Ikon Sosial Media */}
+          {/* Social Media Icons */}
           <div className="reveal mt-6 flex gap-4 text-muted-foreground">
             <a
               href="https://linkedin.com/in/adrian-mardiat"
@@ -71,7 +71,7 @@ export function Hero() {
             className="reveal mt-6 flex flex-wrap items-center gap-3"
             style={{ transitionDelay: "100ms" }}
           >
-            {/* Kampus Badge */}
+            {/* Campus Badge */}
             <div className="galaxy-chip flex items-center gap-2 rounded-xl px-3 py-2 transition-all hover:border-primary/50 hover:shadow-glow">
               <GraduationCap size={16} className="text-primary" />
               <span className="text-sm font-medium text-foreground">President University</span>
@@ -86,7 +86,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Deskripsi Singkat */}
+          {/* Short Description */}
           <p
             className="reveal mt-6 max-w-lg text-base text-muted-foreground sm:text-lg"
             style={{ transitionDelay: "150ms" }}
@@ -95,7 +95,7 @@ export function Hero() {
             focus on creating functional, data-driven digital solutions.
           </p>
 
-          {/* Tombol Aksi (CTA) */}
+          {/* Action Buttons (CTA) */}
           <div
             className="reveal mt-10 flex flex-wrap items-center gap-4"
             style={{ transitionDelay: "240ms" }}
@@ -104,7 +104,7 @@ export function Hero() {
               href="#projects"
               className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-gradient-primary px-8 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:scale-105 active:scale-95"
             >
-              Lihat Proyek
+              View Projects
               <ArrowDown size={16} className="transition-transform group-hover:translate-y-0.5" />
             </a>
             <a
@@ -121,12 +121,12 @@ export function Hero() {
               href="#contact"
               className="galaxy-chip inline-flex min-h-11 items-center gap-2 rounded-full px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary active:scale-95"
             >
-              Kontak Saya
+              Contact Me
             </a>
           </div>
         </div>
 
-        {/* ================= KOLOM KANAN: FOTO + ORBIT ================= */}
+        {/* ================= RIGHT COLUMN: PHOTO + ORBIT ================= */}
         <div
           className="reveal order-1 flex justify-center md:order-2 md:justify-end"
           style={{ transitionDelay: "300ms" }}
@@ -175,7 +175,7 @@ export function Hero() {
               }}
             />
 
-            {/* Container Foto */}
+            {/* Photo Container */}
             <div
               className="galaxy-card relative h-105 w-[320px] overflow-hidden rounded-[2.5rem] shadow-2xl sm:h-130 sm:w-105"
               style={{ animation: "cosmic-border-glow 6s ease-in-out infinite" }}
@@ -186,7 +186,7 @@ export function Hero() {
                 className="h-full w-full object-cover"
               />
 
-              {/* Overlay Identitas (Floating Card) */}
+              {/* Identity Overlay (Floating Card) */}
               <div className="galaxy-card absolute bottom-6 left-6 right-6 rounded-2xl p-4">
                 <div className="flex items-center gap-3">
                   <div className="relative flex h-3 w-3">
@@ -203,7 +203,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Indikator Scroll */}
+      {/* Scroll Indicator */}
       <div
         className="reveal absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
         style={{ transitionDelay: "500ms" }}

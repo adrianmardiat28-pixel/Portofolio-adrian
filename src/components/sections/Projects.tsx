@@ -6,6 +6,9 @@ import {
   MessageSquareWarning,
   Globe,
   Recycle,
+  Building2,
+  Briefcase,
+  Newspaper,
 } from "lucide-react";
 
 const projects = [
@@ -36,7 +39,7 @@ const projects = [
       "An educational platform to raise awareness about cyberbullying and provide resources for prevention.",
     icon: MessageSquareWarning,
     stack: ["React", "Nano Banana", "Tailwind CSS"],
-    link: "https://safenet-multimedia.netlify.app", // Tambahkan link jika ada (misal GitHub)
+    link: "https://safenet-multimedia.netlify.app", // Add link if available (e.g. GitHub)
     accent: "from-emerald-glow/30 to-transparent",
   },
   {
@@ -46,7 +49,7 @@ const projects = [
       "Financial transaction tracking for Organitation, with easy-to-understand financial reports.",
     icon: BarChart3,
     stack: ["React", "Supabase", "Tailwind CSS"],
-    link: "https://jakarta-mengabdi-accounting.vercel.app/", // Tambahkan link jika ada (misal GitHub)
+    link: "https://jakarta-mengabdi-accounting.vercel.app/", // Add link if available (e.g. GitHub)
     accent: "from-violet-glow/30 to-transparent",
   },
 
@@ -55,7 +58,7 @@ const projects = [
     tag: "COMMUNITY PROFILE",
     description:
       "A digital archive and community platform designed to document social initiatives, annual timelines, and community impact across Jakarta.",
-    icon: Globe, // Bisa diganti Globe atau Users agar lebih merepresentasikan web profil/komunitas dibanding BarChart3
+    icon: Globe, // Can be replaced with Globe or Users to better represent web profile/community instead of BarChart3
     stack: ["React", "Supabase", "Tailwind CSS"],
     link: "https://pengabdian.jakartamengabdi.com/",
     accent: "from-orange-500/20 to-transparent",
@@ -69,6 +72,36 @@ const projects = [
     stack: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://mahartagd.com/",
     accent: "from-red-500/30 to-transparent",
+  },
+  {
+    title: "MBC Tax",
+    tag: "Company Profile",
+    description:
+      "Company profile website for MBC Tax. Features a dynamic admin dashboard for easy content management and updates.",
+    icon: Building2,
+    stack: ["React", "Next.js", "Tailwind CSS"],
+    link: "https://mbctax.com/",
+    accent: "from-blue-500/30 to-transparent",
+  },
+  {
+    title: "MBC Tax Career",
+    tag: "Career Portal",
+    description:
+      "A career portal platform for MBC Tax featuring a comprehensive admin dashboard to track and manage job applicants efficiently.",
+    icon: Briefcase,
+    stack: ["React", "Next.js", "Tailwind CSS"],
+    link: "https://career.mbctax.com/",
+    accent: "from-indigo-500/30 to-transparent",
+  },
+  {
+    title: "MBC Tax News",
+    tag: "News & Publication",
+    description:
+      "A dedicated news and publication platform for MBC Tax to share the latest updates, tax insights, and corporate articles.",
+    icon: Newspaper,
+    stack: ["React", "Next.js", "Tailwind CSS"],
+    link: "https://mbctaxnews.com/id",
+    accent: "from-sky-500/30 to-transparent",
   },
 ];
 
@@ -86,7 +119,7 @@ export function Projects() {
           </h2>
         </div>
 
-        {/* CONTAINER FLEXIBLE: Rata Tengah */}
+        {/* FLEXIBLE CONTAINER: Center Aligned */}
         <div className="flex flex-wrap justify-center gap-8">
           {projects.map((p, i) => {
             const Icon = p.icon;

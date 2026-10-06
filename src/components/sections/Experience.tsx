@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import {
   Users,
+  Briefcase,
   Calendar,
   MapPin,
   ChevronLeft,
@@ -11,7 +12,7 @@ import {
 } from "lucide-react";
 
 /* ─── Types ─── */
-interface OrgRole {
+interface ExperienceRole {
   role: string;
   period: string;
   description: string;
@@ -21,95 +22,37 @@ interface OrgRole {
   accent: string;
 }
 
-interface Organization {
+interface ExperienceItem {
   name: string;
   subtitle?: string;
   logo: string;
   website?: string;
-  roles: OrgRole[];
+  roles: ExperienceRole[];
 }
 
 /* ─── Data ─── */
-const organizations: Organization[] = [
+const experiences: ExperienceItem[] = [
   {
-    name: "Jakarta Mengabdi",
-    subtitle: "Tactical Program Staff 2025",
-    logo: "/logo-jm.png",
-    website: "https://jakartamengabdi.com",
+    name: "MBC Tax",
+    subtitle: "Software Engineer Intern",
+    logo: "/Logo-MBC.png",
+    website: "https://mbctax.com",
     roles: [
       {
-        role: "Sapa Kampung 2025",
-        period: "Feb 2025 – Sep 2025",
-        location: "Kepulauan Seribu, Jakarta",
-        description:
-          'Designed and executed the "Sapa Kampung" community service program for 3 days and 2 nights in Kepulauan Seribu. This program focused on empowering local communities through educational and social activities.',
-        highlights: [
-          "Sapa Kampung Program — 3 days 2 nights",
-          "Community service in Kepulauan Seribu",
-          "Local community empowerment",
-        ],
-        photos: [], // User will add photos later
-        accent: "from-cyan-glow/25 to-transparent",
-      },
-      {
-        role: "Event Coordinator for Community Festival 2025",
-        period: "November 2025",
-        location: "Kampung Lebak, South Jakarta",
-        description:
-          "Coordinated the Community Festival in Kampung Lebak, South Jakarta. The festival featured an MSME bazaar and provided free health check-up services for local residents.",
-        highlights: [
-          "Community Festival for local residents",
-          "MSME Bazaar",
-          "Free health check-ups",
-        ],
-        photos: [], // User will add photos later
-        accent: "from-violet-glow/25 to-transparent",
-      },
-    ],
-  },
-  {
-    name: "Jakarta Mengabdi",
-    subtitle: "Financial Staff 2026",
-    logo: "/logo-jm.png",
-    website: "https://jakartamengabdi.com",
-    roles: [
-      {
-        role: "Accounting System",
-        period: "Feb 2026 – Present",
+        role: "Software Engineer Intern",
+        period: "Dec 31, 2026 – Nov 27, 2027",
         location: "Jakarta, Indonesia",
         description:
-          "Built a digital accounting system for organizational financial tracking, ensuring transparency and accuracy in managing community funds.",
+          "Developed the digital ecosystem for MBC Tax using the Laravel framework. Responsible for building the company profile website, career portal, news/publication platform, and designing as well as implementing an internal KPI (Key Performance Indicator) system for employee performance evaluation. Applied in-depth understanding of the MVC (Model-View-Controller) architecture to produce clean, scalable, and maintainable code.",
         highlights: [
-          "Digital financial tracking system",
-          "Fund management transparency",
-          "Automated financial reports",
+          "Company Profile & Career Website Development",
+          "News & Publication System",
+          "Employee KPI Evaluation System",
+          "MVC Architecture Implementation",
+          "Laravel & PHP Development"
         ],
         photos: [],
-        accent: "from-cyan-glow/25 to-transparent",
-      },
-      {
-        role: "Kakak Saku — Donation Platform",
-        period: "Feb 2026 – Present",
-        location: "Jakarta, Indonesia",
-        description:
-          'Developed the "Kakak Saku" donation platform to manage 9-month routine donations and emergency disaster relief funds. This platform supports sustainable funding for community programs.',
-        highlights: ["9-month routine donations", "Disaster relief donations", "Sustainable funding"],
-        photos: [],
-        accent: "from-violet-glow/25 to-transparent",
-      },
-      {
-        role: "Community Service Update Website",
-        period: "Feb 2026 – Present",
-        location: "Jakarta, Indonesia",
-        description:
-          "Created and managed a community service update website to digitally document all social activities, making them easily accessible to the public and stakeholders.",
-        highlights: [
-          "Digital activity documentation",
-          "Public accessibility",
-          "Community service archives",
-        ],
-        photos: [],
-        accent: "from-cyan-glow/25 to-transparent",
+        accent: "from-blue-500/25 to-transparent",
       },
     ],
   },
@@ -240,9 +183,9 @@ function PhotoGallery({ photos }: { photos: string[] }) {
 }
 
 /* ─── Main Section ─── */
-export function Organizations() {
+export function Experience() {
   return (
-    <section id="organizations" className="cosmic-section relative px-6 py-28">
+    <section id="experience" className="cosmic-section relative px-6 py-28">
       {/* Cosmic divider top */}
       <div className="cosmic-divider mx-auto mb-8 max-w-4xl" />
 
@@ -250,25 +193,24 @@ export function Organizations() {
         {/* Section Header */}
         <div className="reveal mb-14 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
-            05 — Organizations
+            04 — Experience
           </p>
           <h2 className="mt-3 text-4xl font-bold sm:text-5xl">
-            Community <span className="text-gradient">impact</span>.
+            Professional <span className="text-gradient">journey</span>.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
-            Active involvement in community organizations, driving social impact through meaningful
-            programs and initiatives.
+            My professional work experience, showcasing roles where I've delivered impactful solutions and grown as an engineer.
           </p>
         </div>
 
-        {/* Organizations */}
+        {/* Experiences */}
         <div className="flex flex-col gap-12">
-          {organizations.map((org) => (
-            <div key={org.name} className="reveal">
-              {/* Org Header */}
+          {experiences.map((exp) => (
+            <div key={exp.name} className="reveal">
+              {/* Exp Header */}
               <div className="mb-8 flex items-center gap-5">
                 <div className="relative flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card/60 p-2 backdrop-blur">
-                  <img src={org.logo} alt={org.name} className="h-full w-full object-contain" />
+                  <img src={exp.logo} alt={exp.name} className="h-full w-full object-contain" />
                   {/* Subtle orbital glow */}
                   <div
                     className="absolute inset-[-4px] rounded-2xl border border-primary/15"
@@ -278,21 +220,21 @@ export function Organizations() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">{org.name}</h3>
-                  {org.subtitle && (
+                  <h3 className="text-2xl font-bold">{exp.name}</h3>
+                  {exp.subtitle && (
                     <p className="mt-1 font-mono text-sm font-medium text-foreground">
-                      {org.subtitle}
+                      {exp.subtitle}
                     </p>
                   )}
-                  {org.website && (
+                  {exp.website && (
                     <a
-                      href={org.website}
+                      href={exp.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-1 inline-flex items-center gap-1.5 text-xs text-primary/80 transition-colors hover:text-primary"
                     >
                       <ExternalLink size={11} />
-                      {org.website.replace(/^https?:\/\//, "")}
+                      {exp.website.replace(/^https?:\/\//, "")}
                     </a>
                   )}
                 </div>
@@ -300,7 +242,7 @@ export function Organizations() {
 
               {/* Roles Timeline */}
               <div className="relative ml-3 border-l-2 border-border/40 pl-8 sm:ml-8">
-                {org.roles.map((role, i) => (
+                {exp.roles.map((role, i) => (
                   <div
                     key={role.role}
                     className="reveal group relative mb-10 last:mb-0"
@@ -345,7 +287,7 @@ export function Organizations() {
                           </div>
                         </div>
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-                          <Users size={18} />
+                          <Briefcase size={18} />
                         </div>
                       </div>
 

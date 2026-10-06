@@ -1,4 +1,4 @@
-import { Lanyard } from "../Lanyard"; // Pastikan import ini ada di baris paling atas
+import { Lanyard } from "../Lanyard"; // Ensure this import is at the very top
 
 const skillGroups = [
   {
@@ -11,7 +11,7 @@ const skillGroups = [
     accent: "from-violet-glow/20 to-violet-glow/5",
     skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Django", "Streamlit"],
   },
-  // Jika nanti tambah grup ke-3, ke-4, dst, dia akan otomatis tergeser dan tetap rapi
+  // If you add 3rd, 4th groups later, it will automatically shift and stay neat
 ];
 
 export function About() {
@@ -50,18 +50,18 @@ export function About() {
         <circle cx="75%" cy="80%" r="3" fill="currentColor" opacity="0.7" />
         <circle cx="90%" cy="75%" r="2" fill="currentColor" opacity="0.4" />
       </svg>
-      {/* Container diperlebar ke max-w-6xl agar muat Lanyard + Teks */}
+      {/* Container widened to max-w-6xl to fit Lanyard + Text */}
       <div className="mx-auto max-w-6xl">
-        {/* GRID LAYOUT: 1 kolom di HP, terbagi 2 kolom di layar besar (lg) */}
+        {/* GRID LAYOUT: 1 column on mobile, 2 columns on large screens (lg) */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_2fr]">
-          {/* --- KOLOM KIRI: LANYARD --- */}
+          {/* --- LEFT COLUMN: LANYARD --- */}
           <div className="flex h-full w-full items-center justify-center lg:-mt-10 z-20">
             <Lanyard />
           </div>
 
-          {/* --- KOLOM KANAN: KONTEN ABOUT LAMA KAMU --- */}
+          {/* --- RIGHT COLUMN: OLD ABOUT CONTENT --- */}
           <div className="w-full">
-            {/* Teks rata tengah di HP, tapi rata kiri di layar besar (lg:text-left) agar pas di sebelah Lanyard */}
+            {/* Text centered on mobile, but left-aligned on large screens (lg:text-left) to fit next to Lanyard */}
             <div className="reveal mb-14 text-center lg:text-left">
               <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
                 01 — About
@@ -77,7 +77,7 @@ export function About() {
               and conducting statistical analysis to generate actionable insights."
             </div>
 
-            {/* CONTAINER SKILL: justify-center di HP, justify-start di layar besar */}
+            {/* SKILL CONTAINER: justify-center on mobile, justify-start on large screens */}
             <div className="mt-16 flex flex-wrap justify-center gap-6 lg:justify-start">
               {skillGroups.map((group, i) => (
                 <div
